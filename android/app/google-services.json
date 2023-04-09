@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "724277672137",
+    "project_id": "make-my-party-7e8eb",
+    "storage_bucket": "make-my-party-7e8eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724277672137:android:92c80f0cbb0bd403607518",
+        "android_client_info": {
+          "package_name": "com.example.make_my_party"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724277672137-8nnfbpkfolohndvcln4g6hkhkvua3k29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuYrV1Sv5WvBJgzeh8H0ZpVtRES4qY2ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724277672137-8nnfbpkfolohndvcln4g6hkhkvua3k29.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "724277672137-oelcaf6o1j485g6b3her3tfeg7gprrh3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.makeMyParty"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
