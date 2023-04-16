@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:make_my_party/constants/colors.dart';
+import 'package:make_my_party/screens/profile/favorite.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -82,6 +83,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                
                 // aba de pesquisa
                 TextField(
                   decoration: InputDecoration(
@@ -102,7 +104,18 @@ class _HomePageState extends State<HomePage> {
                       hintText: "Buscar em Make My Party",
                       filled: true,
                       fillColor: appColorGrey),
-                )
+                ),
+                IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => Favorites())
+                          )
+                  );
+                },
+                icon: const Icon(Icons.arrow_forward_sharp)
+                ),
 
                 // recomendações do aplicativo
 
@@ -113,6 +126,7 @@ class _HomePageState extends State<HomePage> {
                 // últimos contratos
 
                 // navigation bar
+                
               ],
             ),
           ),
