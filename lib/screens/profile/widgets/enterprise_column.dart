@@ -31,7 +31,7 @@ class _EnterpriseColumnState extends State<EnterpriseColumn> {
                         padding: EdgeInsets.only(left: 4.0),
                         child: Text('3.5',style: TextStyle(color: appColorPurple, fontSize: 15),),
                       ),
-                      Icon(Icons.star), 
+                      
                       Padding(
                         padding: EdgeInsets.only(left: 8.0),
                         child: Text('Brinquedos infláveis')

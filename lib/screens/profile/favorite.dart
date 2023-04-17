@@ -40,9 +40,9 @@ class _FavoritesState extends State<Favorites> {
           ),
         ),
         body: ListView.builder(
-            itemCount: 2,
+            itemCount: 20,
             itemBuilder: (BuildContext context, int index) {
-              EnterpriseColumn(); 
+              return EnterpriseColumn(); 
             }),
 
         bottomNavigationBar: AppBottomNavigation(),

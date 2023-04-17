@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'package:make_my_party/firebase/firebase_options.dart';
 import 'package:make_my_party/screens/home/home.dart';
+import 'package:make_my_party/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
