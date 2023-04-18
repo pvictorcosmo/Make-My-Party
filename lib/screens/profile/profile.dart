@@ -75,11 +75,12 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),  
               ],
             ),
           ),
@@ -114,6 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -153,6 +155,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -192,6 +195,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -231,6 +235,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -270,6 +275,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -301,6 +307,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -332,6 +339,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -363,6 +371,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
@@ -394,6 +403,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
+                Spacer(),
                 IconButton(
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
