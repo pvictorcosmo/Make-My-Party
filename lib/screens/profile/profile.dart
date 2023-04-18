@@ -56,6 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Chats',
@@ -94,6 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Pagamentos',
@@ -132,6 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Cupons',
@@ -170,6 +173,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Fidelidade',
@@ -208,6 +212,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Favoritos',
@@ -246,6 +251,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Meus dados',
@@ -284,6 +290,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Ajuda',
@@ -314,6 +321,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Configurações',
@@ -344,6 +352,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Segurança',
@@ -374,6 +383,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Sugerir empresas',
