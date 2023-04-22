@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'package:make_my_party/firebase/firebase_options.dart';
-import 'package:make_my_party/screens/home/home.dart';
-import 'package:make_my_party/splash.dart';
-import 'package:make_my_party/screens/profile/profile.dart';
+import 'package:make_my_party/widgets/shared/navigator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +25,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Make My Party',
-      home: HomePage(),
+      home: MainNavigator(),
     );
   }
 }
