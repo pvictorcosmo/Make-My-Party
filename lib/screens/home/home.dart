@@ -27,9 +27,9 @@ class _HomePageState extends State<HomePage> {
   int index = 0;
   int activeIndex = 0;
   List<String> banners = [
-    "lib/images/banners/banner1.png",
-    "lib/images/banners/banner2.png",
-    "lib/images/banners/banner3.png",
+    "assets/images/home_images/banners/banner1.png",
+    "assets/images/home_images/banners/banner2.png",
+    "assets/images/home_images/banners/banner3.png",
   ];
 
   @override
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/categories/dj.png',
+                              'assets/images/home_images/categories/dj.png',
                               width: 55,
                               height: 55,
                             ),
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/categories/bebidas.png',
+                              'assets/images/home_images/categories/bebidas.png',
                               width: 55,
                               height: 55,
                             ),
@@ -207,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/categories/local.png',
+                              'assets/images/home_images/categories/local.png',
                               width: 55,
                               height: 55,
                             ),
@@ -235,7 +235,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/categories/iluminacao.png',
+                              'assets/images/home_images/categories/iluminacao.png',
                               width: 55,
                               height: 55,
                             ),
@@ -302,7 +302,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/recommendations/catdealers.png',
+                              'assets/images/home_images/recommendations/catdealers.png',
                               width: 55,
                               height: 55,
                             ),
@@ -330,7 +330,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/recommendations/souse7e.png',
+                              'assets/images/home_images/recommendations/souse7e.png',
                               width: 55,
                               height: 55,
                             ),
@@ -358,7 +358,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/recommendations/lamaison.png',
+                              'assets/images/home_images/recommendations/lamaison.png',
                               width: 55,
                               height: 55,
                             ),
@@ -386,7 +386,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/recommendations/fortaldrinks.png',
+                              'assets/images/home_images/recommendations/fortaldrinks.png',
                               width: 55,
                               height: 55,
                             ),
@@ -415,9 +415,9 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     CarouselSlider(
                         items: [
-                          "lib/images/banners/banner1.png",
-                          "lib/images/banners/banner2.png",
-                          "lib/images/banners/banner3.png"
+                          "assets/images/home_images/banners/banner1.png",
+                          "assets/images/home_images/banners/banner2.png",
+                          "assets/images/home_images/banners/banner3.png"
                         ].map((i) {
                           return Builder(builder: (BuildContext context) {
                             return Container(
@@ -486,7 +486,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/hired/matue.png',
+                              'assets/images/home_images/hired/matue.png',
                               width: 55,
                               height: 55,
                             ),
@@ -514,7 +514,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/hired/living.png',
+                              'assets/images/home_images/hired/living.png',
                               width: 55,
                               height: 55,
                             ),
@@ -542,7 +542,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/hired/alok.png',
+                              'assets/images/home_images/hired/alok.png',
                               width: 55,
                               height: 55,
                             ),
@@ -570,7 +570,7 @@ class _HomePageState extends State<HomePage> {
                               height: 8,
                             ),
                             Image.asset(
-                              'lib/images/hired/hytti.png',
+                              'assets/images/home_images/hired/hytti.png',
                               width: 55,
                               height: 55,
                             ),
