@@ -598,69 +598,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-
-        // navigation bar
-        bottomNavigationBar: NavigationBarTheme(
-          data: NavigationBarThemeData(
-              indicatorColor: Colors.transparent,
-              iconTheme:
-                  const MaterialStatePropertyAll(IconThemeData(size: 30)),
-              labelTextStyle: MaterialStatePropertyAll(GoogleFonts.poppins(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-              ))),
-          child: NavigationBar(
-            selectedIndex: index,
-            onDestinationSelected: (index) =>
-                setState(() => this.index = index),
-            destinations: const [
-              NavigationDestination(
-                icon: Icon(
-                  Icons.home_outlined,
-                  color: Colors.grey,
-                ),
-                selectedIcon: Icon(
-                  Icons.home,
-                  color: Colors.black,
-                ),
-                label: "Ínicio",
-              ),
-              NavigationDestination(
-                icon: Icon(
-                  Icons.search_outlined,
-                  color: Colors.grey,
-                ),
-                selectedIcon: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                ),
-                label: "Busca",
-              ),
-              NavigationDestination(
-                icon: Icon(
-                  Icons.edit_document,
-                  color: Colors.grey,
-                ),
-                selectedIcon: Icon(
-                  Icons.edit_document,
-                  color: Colors.black,
-                ),
-                label: "Contratos",
-              ),
-              NavigationDestination(
-                icon: Icon(
-                  Icons.person_outline,
-                  color: Colors.grey,
-                ),
-                selectedIcon: Icon(
-                  Icons.person,
-                  color: Colors.black,
-                ),
-                label: "Perfil",
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }

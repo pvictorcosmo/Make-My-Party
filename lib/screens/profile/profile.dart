@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:make_my_party/constants/colors.dart';
 
-
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -24,8 +23,8 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
-                  'images/profile.png',
-                ),
+                'assets/images/profile.png',
+              ),
             ),
           ],
         ),
@@ -33,13 +32,9 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Text(
           'Jaqueline Hagenes',
           style: GoogleFonts.poppins(
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-            fontSize: 24
-          ),
+              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 24),
         ),
       ),
-
       body: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),  
+                ),
               ],
             ),
           ),
@@ -101,10 +96,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Pagamentos',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     Text(
                       'Meus saldos e cartões',
@@ -120,7 +114,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -141,10 +135,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Cupons',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     Text(
                       'Meus cupons de desconto',
@@ -160,7 +153,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -181,10 +174,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Fidelidade',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     Text(
                       'Minhas fidelidades',
@@ -200,7 +192,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -221,10 +213,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Favoritos',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     Text(
                       'Minhas empresas favoritas',
@@ -240,7 +231,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -261,10 +252,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Meus dados',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
                     ),
                     Text(
                       'Minhas informações de conta',
@@ -280,7 +270,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -301,9 +291,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Ajuda',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: Colors.black
-                      ),
+                          fontSize: 18, color: Colors.black),
                     ),
                   ],
                 ),
@@ -312,7 +300,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -333,9 +321,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Configurações',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: Colors.black
-                      ),
+                          fontSize: 18, color: Colors.black),
                     ),
                   ],
                 ),
@@ -344,7 +330,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -365,9 +351,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Segurança',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: Colors.black
-                      ),
+                          fontSize: 18, color: Colors.black),
                     ),
                   ],
                 ),
@@ -376,7 +360,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
@@ -397,9 +381,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Sugerir empresas',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        color: Colors.black
-                      ),
+                          fontSize: 18, color: Colors.black),
                     ),
                   ],
                 ),
@@ -408,91 +390,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   icon: Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
-                ),       
+                ),
               ],
             ),
           ),
         ],
-      ),
-
-      bottomNavigationBar: BottomAppBar(
-        color: appColorGrey,
-        child: Container(
-          height: 75.0,
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.home),
-                    color: appColorDarkGrey,
-                    onPressed: () {},
-                  ),
-                  Text(
-                    'Início',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold,
-                      color: appColorDarkGrey,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.search),
-                    color: appColorDarkGrey,
-                    onPressed: () {},
-                  ),
-                  Text(
-                    'Busca',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold,
-                      color: appColorDarkGrey,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.edit_document),
-                    color: appColorDarkGrey,
-                    onPressed: () {},
-                  ),
-                  Text(
-                    'Contratos',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold,
-                      color: appColorDarkGrey,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.person),
-                    color: Colors.black,
-                    onPressed: () {},
-                  ),
-                  Text(
-                    'Perfil',
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
