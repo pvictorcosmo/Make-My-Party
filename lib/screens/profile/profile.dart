@@ -1,40 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:make_my_party/constants/colors.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
   @override
-  _ProfilePageState createState() => _ProfilePageState();
+  ProfilePageState createState() => ProfilePageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 158,
-        backgroundColor: Colors.white,
-        leading: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/profile.png',
-              ),
-            ),
-          ],
-        ),
-        leadingWidth: 150,
-        title: Text(
-          'Jaqueline Hagenes',
-          style: GoogleFonts.poppins(
-              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 24),
-        ),
-      ),
+      appBar: _buildAppBar(),
       body: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -44,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.chat_outlined),
+                  icon: const Icon(Icons.chat_outlined),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -70,9 +50,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -84,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.credit_card_outlined),
+                  icon: const Icon(Icons.credit_card_outlined),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -109,9 +89,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -123,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.discount_outlined),
+                  icon: const Icon(Icons.discount_outlined),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -148,9 +128,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -162,7 +142,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.star_border),
+                  icon: const Icon(Icons.star_border),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -187,9 +167,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -201,7 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.favorite_border),
+                  icon: const Icon(Icons.favorite_border),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -226,9 +206,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -240,7 +220,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.insert_drive_file_outlined),
+                  icon: const Icon(Icons.insert_drive_file_outlined),
                   color: Colors.black,
                   onPressed: () {},
                 ),
@@ -265,9 +245,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -279,7 +259,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.help_outline_outlined),
+                  icon: const Icon(Icons.help_outline_outlined),
                   color: appColorDarkGrey,
                   onPressed: () {},
                 ),
@@ -295,9 +275,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -309,7 +289,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   color: appColorDarkGrey,
                   onPressed: () {},
                 ),
@@ -325,9 +305,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -339,7 +319,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.security),
+                  icon: const Icon(Icons.security),
                   color: appColorDarkGrey,
                   onPressed: () {},
                 ),
@@ -355,9 +335,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -369,7 +349,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.shopping_bag_outlined),
+                  icon: const Icon(Icons.shopping_bag_outlined),
                   color: appColorDarkGrey,
                   onPressed: () {},
                 ),
@@ -385,9 +365,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
-                  icon: Icon(Icons.keyboard_arrow_right),
+                  icon: const Icon(Icons.keyboard_arrow_right),
                   color: appColorPurple,
                   onPressed: () {},
                 ),
@@ -395,6 +375,31 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      toolbarHeight: 158,
+      backgroundColor: Colors.white,
+      leading: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/images/profile.png',
+            ),
+          ),
+        ],
+      ),
+      leadingWidth: 150,
+      title: Text(
+        'Jaqueline Hagenes',
+        style: GoogleFonts.poppins(
+            fontWeight: FontWeight.bold, color: Colors.black, fontSize: 24),
       ),
     );
   }

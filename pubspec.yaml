@@ -69,11 +69,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/johnston.jpg
-    - assets/images/home_images/banners/
-    - assets/images/home_images/categories/
-    - assets/images/home_images/hired/
-    - assets/images/home_images/recommendations/
+    - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
