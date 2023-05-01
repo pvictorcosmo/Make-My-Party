@@ -6,7 +6,7 @@ import 'package:make_my_party/firebase/firebase_options.dart';
 
 import 'package:make_my_party/screens/home/home.dart';
 
-import 'package:make_my_party/splash.dart';
+import 'package:make_my_party/screens/splash/splash.dart';
 
 import 'package:make_my_party/screens/profile/profile.dart';
 
