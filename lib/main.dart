@@ -10,9 +10,9 @@ import 'package:make_my_party/screens/splash/splash.dart';
 
 import 'package:make_my_party/screens/profile/profile.dart';
 
-import 'package:make_my_party/register/register_email.dart';
-import 'package:make_my_party/register/register_name.dart';
-import 'package:make_my_party/register/register_number.dart';
+import 'package:make_my_party/screens/register/register_email.dart';
+import 'package:make_my_party/screens/register/register_name.dart';
+import 'package:make_my_party/screens/register/register_number.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
