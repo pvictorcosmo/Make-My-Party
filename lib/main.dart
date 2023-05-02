@@ -3,12 +3,10 @@ import 'package:flutter/services.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:make_my_party/firebase/firebase_options.dart';
+import 'package:make_my_party/firebase/helper_functions.dart';
 
 import 'package:make_my_party/screens/home/home.dart';
-
-import 'package:make_my_party/screens/splash/splash.dart';
-
-import 'package:make_my_party/screens/profile/profile.dart';
+import 'package:make_my_party/screens/login/login.dart';
 
 import 'package:make_my_party/screens/register/register_email.dart';
 import 'package:make_my_party/screens/register/register_name.dart';
@@ -24,18 +22,41 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isSignedIn = false;
+
+  @override
+  void initState() {
+    super.initState();
+    getUserLoggedInStatus();
+  }
+
+  getUserLoggedInStatus() async {
+    await HelperFunctions.getUserLoggedInStatus().then((value) {
+      if (value != null) {
+        setState(() {
+          _isSignedIn = value;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Make My Party',
-      home: HomePage(),
+      home: _isSignedIn ? const HomePage() : const LoginPage(),
     );
   }
 }

@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:make_my_party/constants/colors.dart';
 
-
 class RegisterNumberPage extends StatefulWidget {
   const RegisterNumberPage({super.key});
 
   @override
-  _RegisterNumberPageState createState() => _RegisterNumberPageState();
+  RegisterNumberPageState createState() => RegisterNumberPageState();
 }
 
-class _RegisterNumberPageState extends State<RegisterNumberPage> {
+class RegisterNumberPageState extends State<RegisterNumberPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,18 +20,18 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(0),
               child: IconButton(
-                icon: Icon(Icons.keyboard_arrow_left),
+                icon: const Icon(Icons.keyboard_arrow_left),
                 color: appColorPurple,
                 onPressed: () {},
-                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -47,34 +46,32 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
             Row(
               children: [
                 SizedBox(
-                  height: 49,
+                  height: 50,
                   width: 84,
                   child: Form(
-                    child: TextFormField(
-                      maxLength: null,
-                      decoration: InputDecoration(
-                        hintText: '🇧🇷  +55',
-                        hintStyle: GoogleFonts.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: appColorGrey,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: appColorGrey),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: appColorGrey)
-                        ),
+                      child: TextFormField(
+                    maxLength: null,
+                    decoration: InputDecoration(
+                      hintText: '🇧🇷 +55',
+                      hintStyle: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: appColorGrey,
                       ),
-                    )
-                  ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(color: appColorGrey),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: const BorderSide(color: appColorGrey)),
+                    ),
+                  )),
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 14),
                 SizedBox(
                   height: 49,
-                  width: 292,
+                  width: 246,
                   child: Form(
                     child: TextFormField(
                       maxLength: null,
@@ -92,12 +89,11 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: appColorGrey),
+                          borderSide: const BorderSide(color: appColorGrey),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: appColorGrey)
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: const BorderSide(color: appColorGrey)),
                       ),
                     ),
                   ),
@@ -107,18 +103,16 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
             Text(
               '\nInformações sobre seus pedidos serão enviadas para\neste número.\n',
               style: GoogleFonts.poppins(
-                color: appColorDarkGrey,
-                fontWeight: FontWeight.w500,
-                fontSize: 13
-              ),
+                  color: appColorDarkGrey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 13),
             ),
             Text(
               'Como deseja receber seu código?\n',
               style: GoogleFonts.poppins(
-                color: appColorDarkGrey,
-                fontWeight: FontWeight.w500,
-                fontSize: 13.5
-              ),
+                  color: appColorDarkGrey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 13.5),
             ),
             SizedBox(
               height: 49,
@@ -126,8 +120,8 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(appColorPurple)
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(appColorPurple)),
                 child: Text(
                   'Receber por WhatsApp',
                   style: GoogleFonts.poppins(
@@ -139,19 +133,19 @@ class _RegisterNumberPageState extends State<RegisterNumberPage> {
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             SizedBox(
               height: 49,
               width: 390,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      side: BorderSide(color: appColorPurple)
-                    ),
+                        borderRadius: BorderRadius.circular(5),
+                        side: const BorderSide(color: appColorPurple)),
                   ),
                 ),
                 child: Text(

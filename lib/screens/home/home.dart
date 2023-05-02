@@ -4,15 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'package:make_my_party/firebase/helper_functions.dart';
+import 'package:make_my_party/firebase/auth_service.dart';
+import 'package:make_my_party/screens/login/login.dart';
+
 import 'package:make_my_party/screens/widgets/search_bar.dart';
 import 'package:make_my_party/constants/colors.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  HomePageState createState() => HomePageState();
-}
 
 class AppBehavior extends ScrollBehavior {
   @override
@@ -22,8 +19,16 @@ class AppBehavior extends ScrollBehavior {
   }
 }
 
-class HomePageState extends State<HomePage> {
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   // final _textController = TextEditingController();
+  AuthService authService = AuthService();
 
   int index = 0;
   int activeIndex = 0;
@@ -32,6 +37,28 @@ class HomePageState extends State<HomePage> {
     "assets/images/home_images/banners/banner2.png",
     "assets/images/home_images/banners/banner3.png",
   ];
+
+  String userName = "";
+  String email = "";
+
+  @override
+  void initState() {
+    super.initState();
+    gettingUserData();
+  }
+
+  gettingUserData() async {
+    await HelperFunctions.getUserEmailFromSF().then((value) {
+      setState(() {
+        email = value!;
+      });
+    });
+    await HelperFunctions.getUserNameFromSF().then((val) {
+      setState(() {
+        userName = val!;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +106,18 @@ class HomePageState extends State<HomePage> {
           onPressed: () {},
           icon: const Icon(
             Icons.notifications_outlined,
+            color: appColorPurple,
+          ),
+        ),
+        IconButton(
+          onPressed: () async {
+            await authService.signOut();
+            Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+                (route) => false);
+          },
+          icon: const Icon(
+            Icons.logout,
             color: appColorPurple,
           ),
         ),
@@ -428,7 +467,7 @@ class HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Últimos contratos",
+                    "Últimos contratos de $userName",
                     style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 16,

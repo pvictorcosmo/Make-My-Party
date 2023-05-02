@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:make_my_party/constants/colors.dart';
 
-
 class RegisterNamePage extends StatefulWidget {
   const RegisterNamePage({super.key});
 
   @override
-  _RegisterNamePageState createState() => _RegisterNamePageState();
+  RegisterNamePageState createState() => RegisterNamePageState();
 }
 
-class _RegisterNamePageState extends State<RegisterNamePage> {
+class RegisterNamePageState extends State<RegisterNamePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,18 +20,18 @@ class _RegisterNamePageState extends State<RegisterNamePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(0),
               child: IconButton(
-                icon: Icon(Icons.keyboard_arrow_left),
+                icon: const Icon(Icons.keyboard_arrow_left),
                 color: appColorPurple,
                 onPressed: () {},
-                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -53,25 +52,22 @@ class _RegisterNamePageState extends State<RegisterNamePage> {
                   maxLength: null,
                   decoration: InputDecoration(
                     labelText: "Nome",
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: appColorGrey,
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey),
+                      borderSide: const BorderSide(color: appColorGrey),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey)
-                    ),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: appColorGrey)),
                   ),
                 ),
               ),
             ),
-            Text(
-              '\n'
-            ),
+            const Text('\n'),
             SizedBox(
               height: 49,
               width: 292,
@@ -80,25 +76,24 @@ class _RegisterNamePageState extends State<RegisterNamePage> {
                   maxLength: null,
                   decoration: InputDecoration(
                     labelText: "Sobrenome",
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: appColorGrey,
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey),
+                      borderSide: const BorderSide(color: appColorGrey),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey)
-                    ),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: appColorGrey)),
                   ),
                 ),
               ),
             ),
             Text(
               textAlign: TextAlign.start,
-              '\nSeu nome completo ajuda o restaurante a saber quem\nestá pedindo',
+              '\nSeu nome completo ajuda o restaurante a saber quem está pedindo',
               style: GoogleFonts.poppins(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
@@ -107,46 +102,45 @@ class _RegisterNamePageState extends State<RegisterNamePage> {
             ),
             RichText(
               text: TextSpan(
-                text: '\nAo continuar, você concorda com os ',
-                style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 12,
-                ),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: 'Termos de Uso\n',
-                    style: GoogleFonts.poppins(
-                      color: appColorPurple,
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal,
-                    ),
+                  text: '\nAo continuar, você concorda com os ',
+                  style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
                   ),
-                  TextSpan(
-                    text: 'e a ',
-                    style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Termos de Uso\n',
+                      style: GoogleFonts.poppins(
+                        color: appColorPurple,
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
-                  ),
-                  TextSpan(
-                    text: 'Política de Privacidade',
-                    style: GoogleFonts.poppins(
-                      color: appColorPurple,
-                      fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                    TextSpan(
+                      text: 'e a ',
+                      style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
-                  ),
-                ]
-              ),
+                    TextSpan(
+                      text: 'Política de Privacidade',
+                      style: GoogleFonts.poppins(
+                        color: appColorPurple,
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ]),
             ),
           ],
         ),
       ),
       bottomNavigationBar: BottomAppBar(
         color: appColorPurple,
-        child: Container(
+        child: SizedBox(
           height: 82.0,
           child: Row(
             mainAxisSize: MainAxisSize.max,

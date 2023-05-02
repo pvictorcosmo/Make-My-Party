@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:make_my_party/constants/colors.dart';
 
-
 class RegisterEmailPage extends StatefulWidget {
   const RegisterEmailPage({super.key});
 
   @override
-  _RegisterEmailPageState createState() => _RegisterEmailPageState();
+  RegisterEmailPageState createState() => RegisterEmailPageState();
 }
 
-class _RegisterEmailPageState extends State<RegisterEmailPage> {
+class RegisterEmailPageState extends State<RegisterEmailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,18 +20,18 @@ class _RegisterEmailPageState extends State<RegisterEmailPage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(0),
               child: IconButton(
-                icon: Icon(Icons.keyboard_arrow_left),
+                icon: const Icon(Icons.keyboard_arrow_left),
                 color: appColorPurple,
                 onPressed: () {},
-                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -53,18 +52,17 @@ class _RegisterEmailPageState extends State<RegisterEmailPage> {
                   maxLength: null,
                   decoration: InputDecoration(
                     labelText: "E-mail",
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: appColorGrey,
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey),
+                      borderSide: const BorderSide(color: appColorGrey),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: appColorGrey)
-                    ),
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: const BorderSide(color: appColorGrey)),
                   ),
                 ),
               ),
@@ -74,7 +72,7 @@ class _RegisterEmailPageState extends State<RegisterEmailPage> {
       ),
       bottomNavigationBar: BottomAppBar(
         color: appColorPurple,
-        child: Container(
+        child: SizedBox(
           height: 82.0,
           child: Row(
             mainAxisSize: MainAxisSize.max,
