@@ -1,9 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:make_my_party/constants/colors.dart';
+import 'package:make_my_party/firebase/database_service.dart';
 
 class EnterpriseColumn extends StatefulWidget {
-  const EnterpriseColumn({super.key});
+  String? text;
+
+  EnterpriseColumn({required this.text, super.key});
 
   @override
   EnterpriseColumnState createState() => EnterpriseColumnState();
@@ -23,11 +27,11 @@ class EnterpriseColumnState extends State<EnterpriseColumn> {
           fit: BoxFit.cover,
         ),
       ),
-      title: const Text('Johnston INC'),
+      title: Text(widget.text!),
       subtitle: Container(
         alignment: Alignment.centerLeft,
-        child: const Row(
-          children: <Widget>[
+        child: Row(
+          children: const <Widget>[
             Icon(
               Icons.star,
               color: appColorPurple,

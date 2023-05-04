@@ -24,4 +24,16 @@ class DatabaseService {
         await userCollection.where("email", isEqualTo: email).get();
     return snapshot;
   }
+
+  Future<String> getCompanies() async {
+    var snapshot = await FirebaseFirestore.instance.collection('company').get();
+    String? aux;
+
+    for(var element in snapshot.docs){
+      aux = element.get('name');
+    }
+    print(aux);
+
+    return aux!;
+  }
 }

@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:make_my_party/firebase/database_service.dart';
 
 import 'package:make_my_party/screens/widgets/app_bottom_navbar.dart';
 import 'package:make_my_party/screens/widgets/bottom_navbar.dart';
@@ -18,11 +20,25 @@ class FavoritesPageState extends State<FavoritesPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
-      body: ListView.builder(
-          itemCount: 20,
-          itemBuilder: (BuildContext context, int index) {
-            return const EnterpriseColumn();
-          }),
+      body: FutureBuilder(
+        future: DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+            .getCompanies(),
+        builder: (BuildContext context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+                itemCount: 1,
+                itemBuilder: (BuildContext context, int index) {
+                  return EnterpriseColumn(
+                    text: snapshot.data,
+                  );
+                });
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      ),
       bottomNavigationBar: const AppBottomNavigation(),
     );
   }

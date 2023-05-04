@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:make_my_party/screens/favorites/favorites.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'package:make_my_party/firebase/helper_functions.dart';
@@ -111,9 +112,9 @@ class _HomePageState extends State<HomePage> {
         ),
         IconButton(
           onPressed: () async {
-            await authService.signOut();
+            //await authService.signOut();
             Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => const LoginPage()),
+                MaterialPageRoute(builder: (context) => const FavoritesPage()),
                 (route) => false);
           },
           icon: const Icon(
