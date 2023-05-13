@@ -12,6 +12,13 @@ import 'package:make_my_party/screens/register/register_email.dart';
 import 'package:make_my_party/screens/register/register_name.dart';
 import 'package:make_my_party/screens/register/register_number.dart';
 
+import 'package:make_my_party/screens/profile/personal_information.dart';
+import 'package:make_my_party/screens/profile/check_email.dart';
+import 'package:make_my_party/screens/profile/check_number.dart';
+import 'package:make_my_party/screens/profile/contact_details.dart';
+import 'package:make_my_party/screens/profile/credentials.dart';
+import 'package:make_my_party/screens/profile/publicity.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
