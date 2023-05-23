@@ -3,26 +3,27 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:make_my_party/screens/home/home.dart';
 import 'package:make_my_party/screens/profile/profile.dart';
 
-class MainNavigator extends StatefulWidget {
-  const MainNavigator({super.key});
+class AppBottomNavigationBar extends StatefulWidget {
+  const AppBottomNavigationBar({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
-  _MainNavigatorState createState() => _MainNavigatorState();
+  AppBottomNavigationBarState createState() => AppBottomNavigationBarState();
 }
 
-class _MainNavigatorState extends State<MainNavigator> {
-  PageController _pageController = PageController();
+class AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
+  int currentPage = 0;
 
-  int paginaAtual = 0;
-  List<Widget> _screen = [
-    HomePage(),
-    ProfilePage(),
+  final PageController _pageController = PageController();
+
+  final List<Widget> _screen = [
+    const HomePage(),
+    const ProfilePage(),
   ];
 
   void _onPageChanged(int index) {
     setState(() {
-      paginaAtual = index;
+      currentPage = index;
     });
   }
 
@@ -65,7 +66,7 @@ class _MainNavigatorState extends State<MainNavigator> {
           ),
         ],
         onTap: _onItemTapped,
-        currentIndex: paginaAtual,
+        currentIndex: currentPage,
       ),
     );
   }

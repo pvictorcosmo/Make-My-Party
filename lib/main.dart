@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:make_my_party/firebase/firebase_options.dart';
-import 'package:make_my_party/widgets/shared/navigator.dart';
+import 'package:make_my_party/firebase/helper_functions.dart';
+
+import 'package:make_my_party/screens/home/home.dart';
+import 'package:make_my_party/screens/login/login.dart';
+
+import 'package:make_my_party/screens/register/register_email.dart';
+import 'package:make_my_party/screens/register/register_name.dart';
+import 'package:make_my_party/screens/register/register_number.dart';
+
+import 'package:make_my_party/screens/profile/personal_information.dart';
+import 'package:make_my_party/screens/profile/check_email.dart';
+import 'package:make_my_party/screens/profile/check_number.dart';
+import 'package:make_my_party/screens/profile/contact_details.dart';
+import 'package:make_my_party/screens/profile/credentials.dart';
+import 'package:make_my_party/screens/profile/publicity.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,18 +29,41 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isSignedIn = false;
+
+  @override
+  void initState() {
+    super.initState();
+    getUserLoggedInStatus();
+  }
+
+  getUserLoggedInStatus() async {
+    await HelperFunctions.getUserLoggedInStatus().then((value) {
+      if (value != null) {
+        setState(() {
+          _isSignedIn = value;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Make My Party',
-      home: MainNavigator(),
+      home: _isSignedIn ? const HomePage() : const LoginPage(),
     );
   }
 }

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:make_my_party/constants/colors.dart';
 
-
 class AppBottomNavigation extends StatefulWidget {
+  const AppBottomNavigation({super.key});
+
   @override
-  _AppBottomNavigationState createState() => _AppBottomNavigationState();
+  AppBottomNavigationState createState() => AppBottomNavigationState();
 }
 
-class _AppBottomNavigationState extends State<AppBottomNavigation> {
+class AppBottomNavigationState extends State<AppBottomNavigation> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
         selectedItemColor: Colors.black,
         onTap: (index) => setState(() => currentIndex = index),
         type: BottomNavigationBarType.fixed,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, size: 30),
             label: 'Início',
