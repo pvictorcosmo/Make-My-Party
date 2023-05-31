@@ -6,8 +6,10 @@ import 'package:make_my_party/firebase/database_service.dart';
 
 class EnterpriseColumn extends StatefulWidget {
   String? text;
+  String? image;
 
-  EnterpriseColumn({required this.text, super.key});
+
+  EnterpriseColumn({required this.text, super.key, required this.image});
 
   @override
   EnterpriseColumnState createState() => EnterpriseColumnState();
@@ -18,12 +20,14 @@ class EnterpriseColumnState extends State<EnterpriseColumn> {
 
   @override
   Widget build(BuildContext context) {
+     print(widget.image);
     return ListTile(
       contentPadding: const EdgeInsets.all(15.0),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(50),
-        child: Image.asset(
-          'assets/images/johnston.jpg',
+        child: Image.network(
+            widget.image!,
+           
           fit: BoxFit.cover,
         ),
       ),

@@ -24,12 +24,17 @@ class FavoritesPageState extends State<FavoritesPage> {
         future: DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
             .getCompanies(),
         builder: (BuildContext context, snapshot) {
+          print(snapshot.data?[0]);
           if (snapshot.hasData) {
             return ListView.builder(
-                itemCount: 1,
+              
+                itemCount: snapshot.data?.length,
                 itemBuilder: (BuildContext context, int index) {
+                Company company = snapshot.data![index];
                   return EnterpriseColumn(
-                    text: snapshot.data,
+                    text: company.name,
+                    image:company.imageUrl
+                    
                   );
                 });
           } else {

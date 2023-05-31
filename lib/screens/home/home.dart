@@ -104,7 +104,9 @@ class _HomePageState extends State<HomePage> {
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FavoritesPage()));
+          },
           icon: const Icon(
             Icons.notifications_outlined,
             color: appColorPurple,
