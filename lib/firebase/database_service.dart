@@ -96,6 +96,23 @@ class DatabaseService {
     
     return companies;
   }
+      Future<List<Company>> getCompaniesBuffet() async {
+    var snapshot = await FirebaseFirestore.instance.collection('companies').get();
+    List<Company> companies = [];
+    for (var element in snapshot.docs) {
+      String type = element.get('type');
+      if (type == "buffet") {
+        String name = element.get('name');
+        String imageUrl = element.get('image');
+        String ratingQuery = element.get('rating');
+        String descriptionQuery = element.get('description');
+        
+        companies.add(Company(name: name, imageUrl: imageUrl, rating: ratingQuery, description: descriptionQuery));
+      }
+    }
+    
+    return companies;
+  }
 }
 
 

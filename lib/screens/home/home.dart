@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: _entepriseLocal()
           ),
           Center(
-            child: Text("It's sunny here"),
+            child: _entepriseBuffet(),
           ),
         ],
       ),
@@ -185,6 +185,37 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ]),
     );
   }
+    Widget _entepriseBuffet() {
+    return Scaffold(
+    body: FutureBuilder(
+        future: DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+            .getCompaniesBuffet(),
+        builder: (BuildContext context, snapshot) {
+          
+          if (snapshot.hasData) {
+            return ListView.builder(
+              
+                itemCount: snapshot.data?.length,
+                itemBuilder: (BuildContext context, int index) {
+                Company company = snapshot.data![index];
+                  return EnterpriseColumn(
+                    text: company.name,
+                    image:company.imageUrl,
+                    description: company.description,
+                    rating: company.rating
+                    
+                  );
+                });
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      )
+    );
+  }
+
   Widget _entepriseLocal() {
     return Scaffold(
     body: FutureBuilder(
