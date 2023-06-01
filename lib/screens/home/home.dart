@@ -105,7 +105,8 @@ class _HomePageState extends State<HomePage> {
       actions: [
         IconButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FavoritesPage()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const FavoritesPage()));
           },
           icon: const Icon(
             Icons.notifications_outlined,
@@ -114,9 +115,9 @@ class _HomePageState extends State<HomePage> {
         ),
         IconButton(
           onPressed: () async {
-            //await authService.signOut();
+            await authService.signOut();
             Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => const FavoritesPage()),
+                MaterialPageRoute(builder: (context) => const LoginPage()),
                 (route) => false);
           },
           icon: const Icon(

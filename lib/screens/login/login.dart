@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:make_my_party/constants/colors.dart';
@@ -11,6 +10,7 @@ import 'package:make_my_party/firebase/helper_functions.dart';
 import 'package:make_my_party/firebase/database_service.dart';
 import 'package:make_my_party/firebase/auth_service.dart';
 
+import 'package:make_my_party/screens/login/widgets/login_button.dart';
 import 'package:make_my_party/screens/home/home.dart';
 import 'package:make_my_party/screens/register/register.dart';
 import 'package:make_my_party/screens/widgets/shared.dart';
@@ -168,6 +168,10 @@ class _LoginPageState extends State<LoginPage> {
                             },
                           ),
                         ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const LoginButton(),
                         const SizedBox(
                           height: 10,
                         ),
