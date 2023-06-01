@@ -22,7 +22,7 @@ class FavoritesPageState extends State<FavoritesPage> {
       appBar: _buildAppBar(),
       body: FutureBuilder(
         future: DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
-            .getCompanies(),
+            .getCompaniesFavorites(),
         builder: (BuildContext context, snapshot) {
           print(snapshot.data?[0]);
           if (snapshot.hasData) {
@@ -33,7 +33,9 @@ class FavoritesPageState extends State<FavoritesPage> {
                 Company company = snapshot.data![index];
                   return EnterpriseColumn(
                     text: company.name,
-                    image:company.imageUrl
+                    image:company.imageUrl,
+                    description: company.description,
+                    rating: company.rating
                     
                   );
                 });

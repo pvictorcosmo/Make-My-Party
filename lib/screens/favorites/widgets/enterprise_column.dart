@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -7,9 +9,10 @@ import 'package:make_my_party/firebase/database_service.dart';
 class EnterpriseColumn extends StatefulWidget {
   String? text;
   String? image;
-
-
-  EnterpriseColumn({required this.text, super.key, required this.image});
+  String? description;
+  String? rating;
+  
+  EnterpriseColumn({required this.text, super.key, required this.image,required this.description,required this.rating});
 
   @override
   EnterpriseColumnState createState() => EnterpriseColumnState();
@@ -35,7 +38,7 @@ class EnterpriseColumnState extends State<EnterpriseColumn> {
       subtitle: Container(
         alignment: Alignment.centerLeft,
         child: Row(
-          children: const <Widget>[
+          children: <Widget>[
             Icon(
               Icons.star,
               color: appColorPurple,
@@ -43,13 +46,13 @@ class EnterpriseColumnState extends State<EnterpriseColumn> {
             Padding(
               padding: EdgeInsets.only(left: 4.0),
               child: Text(
-                '3.5',
+                widget.rating!,
                 style: TextStyle(color: appColorPurple, fontSize: 15),
               ),
             ),
             Padding(
                 padding: EdgeInsets.only(left: 8.0),
-                child: Text('Brinquedos infláveis')),
+                child: Text(widget.description!)),
           ],
         ),
       ),

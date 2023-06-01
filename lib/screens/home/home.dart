@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:make_my_party/screens/favorites/favorites.dart';
+import 'package:make_my_party/screens/favorites/widgets/enterprise_column.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'package:make_my_party/firebase/helper_functions.dart';
@@ -11,6 +13,8 @@ import 'package:make_my_party/screens/login/login.dart';
 
 import 'package:make_my_party/screens/widgets/search_bar.dart';
 import 'package:make_my_party/constants/colors.dart';
+
+import '../../firebase/database_service.dart';
 
 class AppBehavior extends ScrollBehavior {
   @override
@@ -27,7 +31,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+    TabController? _tabController;
+
   // final _textController = TextEditingController();
   AuthService authService = AuthService();
 
@@ -45,7 +51,24 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    _tabController = TabController(length: 3, vsync:this);
+    _tabController!.addListener(_handleTabSelection);
+
     gettingUserData();
+  }
+
+    @override
+  void dispose() {
+    _tabController!.dispose();
+    super.dispose();
+  }
+
+  void _handleTabSelection() {
+    if (_tabController!.index == 1) {
+      // Código a ser executado quando a aba "Locais" for selecionada
+      // Adicione o código que deseja executar aqui
+      print("Aba Locais selecionada");
+    }
   }
 
   gettingUserData() async {
@@ -68,7 +91,20 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         // localização Ex: Fortaleza, CE e notificações
         appBar: _buildAppBar(),
-        body: _buildBody(),
+        body: TabBarView(
+        controller: _tabController,
+        children: <Widget>[
+          Center(
+            child: _buildBody()
+          ),
+          Center(
+            child: _entepriseLocal()
+          ),
+          Center(
+            child: Text("It's sunny here"),
+          ),
+        ],
+      ),
       ),
     );
   }
@@ -135,9 +171,10 @@ class _HomePageState extends State<HomePage> {
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
-          tabs: [
+          tabs: <Widget> [
             Tab(
               text: "Início",
+
             ),
             Tab(
               text: "Locais",
@@ -146,6 +183,36 @@ class _HomePageState extends State<HomePage> {
               text: "Buffets",
             ),
           ]),
+    );
+  }
+  Widget _entepriseLocal() {
+    return Scaffold(
+    body: FutureBuilder(
+        future: DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+            .getCompaniesLocal(),
+        builder: (BuildContext context, snapshot) {
+          
+          if (snapshot.hasData) {
+            return ListView.builder(
+              
+                itemCount: snapshot.data?.length,
+                itemBuilder: (BuildContext context, int index) {
+                Company company = snapshot.data![index];
+                  return EnterpriseColumn(
+                    text: company.name,
+                    image:company.imageUrl,
+                    description: company.description,
+                    rating: company.rating
+                    
+                  );
+                });
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      )
     );
   }
 
